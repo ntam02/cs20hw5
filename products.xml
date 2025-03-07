@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href = "products.css" ?>
+<products>
+	<product>
+		<name>Running Shoes</name>
+		<description> Pair of blue running shoes</description>
+        <price>60</price>
+		<categories>
+			<category>clothing</category>
+		</categories>
+	</product>
+
+    <product>
+		<name> Vinyl Record </name>
+		<description> Blank vinyl record </description>
+        <price>40</price>
+		<categories>
+			<category>vintage</category>
+		</categories>
+	</product>
+
+    <product>
+		<name>Vintage Leather Jacket</name>
+		<description> Old leather jacket</description>
+        <price>80</price>
+		<categories>
+			<category>clothing</category>
+            <category>vintage</category>
+		</categories>
+	</product>
+
+    <product>
+		<name>Jeans</name>
+		<description> light blue jeans</description>
+        <price>60</price>
+		<categories>
+			<category>clothing</category>
+		</categories>
+	</product>
+
+    <product>
+		<name>Vintage Watch</name>
+		<description> An antique wristwatch</description>
+        <price>110</price>
+		<categories>
+			<category>accessories</category>
+            <category>vintage</category>
+		</categories>
+	</product>
+
+	<product>
+		<name>Hiking Boots</name>
+		<description> Pair of waterproof hiking boots</description>
+        <price>70</price>
+		<categories>
+			<category>clothing</category>
+		</categories>
+	</product>
+
+	<product>
+		<name>Antique Leather Wallet</name>
+		<description> An old Leather Wallet</description>
+        <price>60</price>
+		<categories>
+			<category>vintage</category>
+            <category>accessories</category>
+		</categories>
+	</product>
+
+    <product>
+		<name>Graphic Sweater</name>
+		<description> A gray sweater with an image</description>
+        <price>60</price>
+		<categories>
+			<category>clothing</category>
+		</categories>
+	</product>
+</products>

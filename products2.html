@@ -1,0 +1,39 @@
+<html>
+<head>
+    <link rel="stylesheet" href="products.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <button id="loadProducts">Load Products</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        var products = [];
+        var product = {
+            name: "",
+            description: "",
+            price: -1,
+            categories: []
+        };
+
+        $(document).ready(function() {
+            $("#loadProducts").click(function() {
+                var Url = 'https://nicholast.sgedu.site/HW5/products.json';
+                //var Url = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+                $.getJSON(Url, function(data) {
+                    //$("#result").html(data.contents);
+                    for (i = 0; i < data.length; i++)
+                    {
+                        strProduct = JSON.stringify(data[i]);
+                        products.push(strProduct);
+                    }
+                    document.write([products[4]]);
+                    //$("#result").html(output);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
