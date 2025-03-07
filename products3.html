@@ -6,6 +6,13 @@
 <body>
     <div class="container">
         <button id="loadProducts">Load Products</button>
+        <select id="categorySelect">
+            <option value="">Select a Category</option>
+            <option value="clothing">Clothing</option>
+            <option value="accessories">Accessories</option>
+            <option value="vintage">Vintage</option>
+        </select>
+        <button id="filter">Filter</button>
         <div id="result"></div>
     </div>
     <script>
@@ -15,8 +22,7 @@
         $(document).ready(function() {
             $("#loadProducts").click(function() {
                 var Url = 'https://ntam02.github.io/cs20hw5/products.json';
-                $.getJSON(Url, function(data) 
-                {
+                $.getJSON(Url, function(data) {
                     products = data;
 
                     var output = "";
@@ -35,6 +41,28 @@
                     }
                     $("#result").html(output);
                 });
+            });
+
+            //filtering the output
+            $("#filter").click(function() 
+            {
+                var selectedCategory = $("#categorySelect").val();
+                var output = "";
+                for (i = 0; i < products.length; i++){
+                    if (products[i].categories.contains(selectedCategory)){
+                        output += "<div class=name>" + products[i].name + "</div>\n";
+                        output += "<div class=description>" + products[i].Description + "</div>\n";
+                        output += "<div class=price>" + products[i].price + "</div>\n";
+                        output += "<div class=categories>";
+                        for (j = 0; j < products[i].categories.length; j++)
+                        {
+                            output +=  products[i].categories[j] + " ";
+                        }
+                        output += "</div>\n";
+                        output += "<br>";
+                    }
+                }
+                $("#result").html(output);
             });
         });
     </script>
