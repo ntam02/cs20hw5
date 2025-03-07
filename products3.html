@@ -49,7 +49,7 @@
                 var selectedCategory = $("#categorySelect").val();
                 var output = "";
                 for (i = 0; i < products.length; i++){
-                    if (products[i].categories.contains(selectedCategory)){
+                    if (products[i].categories.includes(selectedCategory)){
                         output += "<div class=name>" + products[i].name + "</div>\n";
                         output += "<div class=description>" + products[i].Description + "</div>\n";
                         output += "<div class=price>" + products[i].price + "</div>\n";
